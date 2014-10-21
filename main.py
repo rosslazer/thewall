@@ -1,4 +1,4 @@
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, g
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, g, send_from_directory
 import json
 from functools import wraps
 from werkzeug import secure_filename
@@ -26,11 +26,14 @@ app.config.from_object(__name__)
 
 app.crew_members = []
 
+
+
 @app.before_first_request
 def init():
     print "I AM INIT"
     f = open('data/crew_members.json', 'r')
     raw_data = f.read()
+    f.close()
     json_data = json.loads(raw_data)
     app.crew_members = json_data
     print app.crew_members
@@ -51,7 +54,7 @@ def save_user(user):
 def update_file():
     #TODO ERROR HANDLING
     f =  open('data/crew_members.json', 'w')
-    jsondatas = json.dumps(g.get('crew_members'))
+    jsondatas = json.dumps(app.crew_members)
     f.write(jsondatas)
     f.close()
 
@@ -67,7 +70,9 @@ def index():
 
 
 
-
+@app.route('/images/<path:filename>')
+def send_foo(filename):
+    return send_from_directory('images/', filename)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -103,7 +108,7 @@ def login_required(f):
 @app.route('/nightswatch')
 @login_required
 def nightswatch():
-    return json.dumps(app.crew_members)
+    return render_template('list_users.html', users=app.crew_members)
 
 @app.route('/nightswatch/new', methods=['GET', 'POST'])
 @login_required

@@ -1,0 +1,9 @@
+{#% extends "layout.html" %#}
+{% block body %}
+
+    <ul id="users">
+    {% for user in users %}
+        <li><a href="{{ user.name }}">{{ user.name }}</a><img src="images/{{user.filename}}"></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
