@@ -1,0 +1,344 @@
+/* ======================
+Base Styles
+====================== */
+
+body {
+  padding-top: 50px;
+  position: relative;
+}
+
+p a {
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
+section > h1 {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.dark {
+  background-color: #fff;
+  /* background-color: #e9c39f; */
+}
+
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+hr {
+  border-color: #e64c3b;
+}
+
+/* Footer */
+
+footer {
+  background-color: #e64c3b;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+footer img {
+  max-width: 250px;
+  padding: 40px 0px;
+}
+
+footer p {
+  margin: 0px;
+  padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  footer img {
+    max-width: 150px;
+    padding: 30px 0px;
+  }
+
+  footer p {
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer img {
+    max-width: 100px;
+    padding: 20px 0px;
+  }
+
+  footer p {
+    padding-bottom: 20px;
+  }
+}
+
+/* ======================
+Homepage Sections
+====================== */
+
+/* Intro, Projects, Members */
+
+#intro img,
+#projects img,
+#members img {
+  max-width: 100%;
+}
+
+#projects img {
+  background-color: #ddd;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#projects a:hover img {
+  background-color: #aaa;
+}
+
+#projects .row > div {
+  text-align: center;
+}
+
+#projects span {
+  font-size: 100px;
+  line-height: 190px;
+}
+
+#members .row > div {
+  position: relative;
+}
+
+#members img {
+  border-radius: 100%;
+}
+
+#members .member-overlay {
+  background-color: black;
+  border-radius: 100%;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  height: 100%;
+  color: white;
+  display: none;
+  padding-top: 40%;
+  font-size: 18px;
+}
+
+#members a:hover .member-overlay {
+  display: block;
+}
+
+#members .members-overlay {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
+#members .members-overlay a {
+  color: #fff;
+  font-size: 15px;
+}
+
+#projects .row,
+#members .row {
+  margin-top: 40px;
+}
+
+/* Programs & News Carousel */
+
+#programs,
+#news {
+  padding-bottom: 0px;
+}
+
+#carousel-programs,
+#carousel-news,
+#contact .row {
+  margin-top: 40px;
+}
+
+.carousel-inner {
+  max-height: 700px;
+}
+
+.carousel-inner a {
+  color: #fff;
+}
+
+.carousel-inner a:hover {
+  color: #e64c3c;
+}
+
+.carousel-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* Contact Footer */
+
+#contact .row > div {
+  text-align: center;
+}
+
+#apply-button {
+  padding: 20px 26px;
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.list-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0px;
+}
+
+.list-container ul {
+  font-size: 75px;
+  list-style: none;
+  position: relative;
+  float: left;
+  left: 45%;
+  display: block;
+  margin-left: 0px;
+}
+
+.list-container ul li {
+  position: relative;
+  float: left;
+  display: block;
+  right: 50%;
+  padding: 0px 20px;
+}
+
+.list-container ul a {
+  color: #333;
+  transition: .08s;
+  -webkit-transition: .08s;
+  -moz-transition: .08s;
+  -ms-transition: .08s;
+  -o-transition: .08s;
+}
+
+.list-container ul a:hover {
+  color: #e64c3b;
+  transition: .08s;
+  -webkit-transition: .08s;
+  -moz-transition: .08s;
+  -ms-transition: .08s;
+  -o-transition: .08s;
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #projects span {
+    font-size: 90px;
+    line-height: 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #projects span {
+    font-size: 70px;
+    line-height: 100px;
+  }
+
+  .list-container ul {
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #intro img,
+  #projects img {
+    max-width: 25%;
+  }
+
+  #projects span {
+    font-size: 40px;
+    line-height: 100px;
+  }
+
+  #projects .row > div,
+  #members .row > div {
+    margin: 20px 0px;
+  }
+
+  #projects .row > div:last-child {
+    margin-bottom: 0px;
+  }
+
+  #projects .row,
+  #members .row {
+    margin-top: 20px;
+  }
+
+  .carousel-caption {
+    padding-top: 0px;
+  }
+
+  .carousel-inner h1 {
+    font-size: 25px;
+  }
+
+  .carousel-inner p {
+    font-size: 12px;
+  }
+
+  .list-container ul {
+    font-size: 45px;
+    left: 35%;
+  }
+}
+
+/* ======================
+Content Page Sections
+====================== */
+
+header .img-container {
+  background-image: url('../img/drones.jpg');
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+header .header-overlay {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(transparent, #000);
+  opacity: 0.5;
+  color: #fff;
+  position: absolute;
+}
+
+header .header-text {
+  color: #fff;
+  bottom: 30px;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+header .header-text h3 {
+  font-style: italic;
+}
+
+#page h2 {
+  border-bottom: 1px solid #e64c3b;
+  padding: 20px 5px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+ul {
+  font-size: 18px;
+}
