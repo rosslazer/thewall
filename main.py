@@ -1,4 +1,4 @@
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, g, send_from_directory
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, g, send_from_directory, jsonify
 import json
 from functools import wraps
 from werkzeug import secure_filename
@@ -63,10 +63,14 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
+@app.route('/crew_members')
+def get_crew():
+    return jsonify(crew=app.crew_members)
 
 @app.route('/')
 def index():
-    return "Welcome to the night's watch!"
+    return render_template('index.html')
+
 
 
 
