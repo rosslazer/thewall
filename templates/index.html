@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="nexisApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,11 @@
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/ionicons.min.css" />
     <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="static/js/controllers.js"></script>
+
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700' rel='stylesheet' type='text/css'>
@@ -161,8 +166,16 @@
 
         <div class="container">
           <!-- Row One -->
-          <div class="row">
-            <div class="col-sm-2">
+          <div class="row" ng-controller="CrewMemberCtrl">
+            <div class="col-sm-2" ng-repeat="member in members">
+              <a href="#">
+                <img src="static/img/sample_headshot.jpg" />
+                <div class="member-overlay">{{member.name}}</div>
+              </a>
+            </div>
+
+
+   <!-- <div class="col-sm-2">
               <a href="#">
                 <img src="static/img/sample_headshot.jpg" />
                 <div class="member-overlay">Billy Ceskavich</div>
@@ -191,13 +204,7 @@
                 <img src="static/img/sample_headshot.jpg" />
                 <div class="member-overlay">Billy Ceskavich</div>
               </a>
-            </div>
-            <div class="col-sm-2">
-              <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
-              </a>
-            </div>
+            </div> -->
           </div>
 
           <!-- Row Two -->
