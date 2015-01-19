@@ -101,7 +101,8 @@ Homepage Sections
   text-align: center;
 }
 
-#projects span {
+#projects span,
+#members span {
   font-size: 100px;
   line-height: 190px;
 }
@@ -142,6 +143,10 @@ Homepage Sections
 #members .members-overlay a {
   color: #fff;
   font-size: 15px;
+}
+
+#members .last {
+  text-align: center;
 }
 
 #projects .row,
@@ -240,14 +245,16 @@ Homepage Sections
 /* Media queries for responsiveness */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  #projects span {
+  #projects span,
+  #members span {
     font-size: 90px;
     line-height: 130px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  #projects span {
+  #projects span,
+  #members span {
     font-size: 70px;
     line-height: 100px;
   }
