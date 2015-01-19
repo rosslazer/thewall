@@ -3,7 +3,7 @@ import json
 from functools import wraps
 from werkzeug import secure_filename
 import os
-
+import uuid
 
 
 
@@ -120,6 +120,7 @@ def new():
     error = None
     if request.method == 'POST':
         print "POST"
+        uuid = uuid.uuid4()
         name = request.form.get('name',None)
         major = request.form.get('major',None)
         twitter = request.form.get('twitter',None)
@@ -135,11 +136,17 @@ def new():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
         newuser = {'name':name, 'major': major, 'twitter': twitter, 'linkedin':linkedin,'github':github, 'bio':bio, 
-        'filename':filename}
+        'filename':filename, 'uuid' : uuid}
         save_user(newuser)
 
         #store data and return redirector
         return "SAVING DATAS"
+
+    return render_template('new.html', error=error)
+
+#TODO: Implement Edit/Destroy
+@app.route('/nightswatch/crewmember/<uuid>', methods=['GET', 'POST'])
+@login_required
 
     return render_template('new.html', error=error)
 
@@ -148,5 +155,5 @@ if __name__=='__main__':
     app.debug = True
     app.run()
 
-
+z
 
