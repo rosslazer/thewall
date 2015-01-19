@@ -1,0 +1,22 @@
+index.html
+
+#projects - container for the projects link section
+.project-link: link to project page
+.project-image: image for that project
+
+#programs - container for the programs/events carousel
+.program-item: container for a specific carousel item
+.program-image: image for the event
+.program-title: name of the program
+.program-desc: quick description of the program
+
+#members - container for members list
+.member-item: individual member container
+.member-image: headshot for the member
+.member-overaly: member name
+
+#news - container for the news carousel
+.news-item: container for a specific carousel item
+.news-image: image for the news story
+.news-title: name of the news story
+.news-desc: quick description of the news story
