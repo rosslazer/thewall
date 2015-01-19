@@ -57,6 +57,8 @@
     <!-- Main Home Content -->
     <div class="container-fluid" role="main">
 
+      <!-- BEGIN INDEX PAGE CONTENT -->
+
       <!-- Intro -->
       <section id="intro">
         <div class="container">
@@ -67,7 +69,9 @@
 
             <div class="col-sm-8">
               <h1>New Explorations in Information Science</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius iaculis mauris, sed rutrum arcu scelerisque nec. Nulla facilisi. Nullam vulputate, velit sed bibendum accumsan, erat nisl ornare enim, ac sollicitudin ex nibh in dolor. Nulla lobortis blandit nulla et dignissim. Curabitur a ex tempor, feugiat leo mattis, ultricies eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus vulputate dui tortor, sit amet malesuada arcu aliquam nec. Vivamus consectetur convallis libero, ac feugiat odio imperdiet volutpat.</p>
+              <p>NEXIS is a student based, membership driven research center based in the <a target="_blank" href="http://ischool.syr.edu/">Syracuse University iSchool</a>. We are innovators supporting innovators, students supporting students, together building upon today's emerging technologies. NEXIS members freely work on independent projects to create novel innovations which advance the fields of information science, engineering, technology.</p>
+
+              <p>NEXIS is open to Syracuse University students from every discipline with the understanding that the best ideas are generated when people from diverse backgrounds and expertise work together. Interested in learning more? Check out our current happenings below, or <a href="mailto:pbcroy@syr.edu">reach out today</a>!</p>
             </div> <!-- /intro body -->
           </div> <!-- /.row -->
         </div> <!-- /row container -->
@@ -78,38 +82,38 @@
       </div>
 
       <section class="dark" id="projects">
-        <h1>Technology & Projects</h1>
+        <h1>Technology &amp; Projects</h1>
 
         <div class="container">
           <!-- Row One -->
           <div class="row">
             <div class="col-sm-2 col-sm-offset-2">
-              <a href="#"><img src="static/img/touchless.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/touchless.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a href="#"><img src="static/img/markerbot.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/markerbot.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a href="#"><img src="static/img/viz.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/viz.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a href="#"><img src="static/img/glass.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/glass.png" alt="TEXT" /></a>
             </div>
           </div>
 
           <!-- Row Two -->
           <div class="row">
             <div class="col-sm-2 col-sm-offset-2">
-              <a href="#"><img src="static/img/gamepad.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/gamepad.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a href="#"><img src="static/img/drone.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/drone.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a href="#"><img src="static/img/ibeacon.png" alt="TEXT" /></a>
+              <a class="project-link" href="#"><img class="project-image" src="static/img/ibeacon.png" alt="TEXT" /></a>
             </div>
             <div class="col-sm-2">
-              <a data-toggle="modal" data-target="#apply-modal" href="#"><span class="glyphicon glyphicon-plus"></span></a>
+              <a class="project-link" href="mailto:pbcroy@syr.edu"><span class="glyphicon glyphicon-plus"></span></a>
             </div>
           </div> <!-- /row two -->
         </div> <!-- /row container -->
@@ -132,21 +136,14 @@
 
           <!-- Slides -->
           <div class="carousel-inner" role="listbox">
-            <div class="item active">
+            <div class="program-item item active">
               <div class="carousel-overlay"></div>
-              <img src="static/img/drones.jpg" alt="Placeholder Image">
+              <img class="program-image" src="static/img/drones.jpg" alt="Placeholder Image">
               <div class="carousel-caption">
-                <h1><a href="#">Skyworks Project + SU Athletics</a></h1>
-                <p>The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
+                <h1><a class="program-title" href="#">Skyworks Project + SU Athletics</a></h1>
+                <p class="program-desc">The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
               </div>
             </div>
-            <div class="item">
-              <div class="carousel-overlay"></div>
-              <img src="static/img/drones.jpg" alt="Placeholder Image">
-              <div class="carousel-caption">
-                <h1><a href="#">Skyworks Project + SU Athletics</a></h1>
-                <p>The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
-              </div>
           </div>
 
           <!-- Controls -->
@@ -166,83 +163,81 @@
 
         <div class="container">
           <!-- Row One -->
-          <div class="row" ng-controller="CrewMemberCtrl">
-            <div class="col-sm-2" ng-repeat="member in members">
+          <div class="row">
+            <div class="col-sm-2 member-item">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">{{member.name}}</div>
+                <img class="member-image" src="static/img/braden.jpg" />
+                <div class="member-overlay">Braden Croy</div>
               </a>
             </div>
-
-
-   <!-- <div class="col-sm-2">
+            <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
+                <img src="static/img/billy.jpg" />
                 <div class="member-overlay">Billy Ceskavich</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/ross.jpg" />
+                <div class="member-overlay">Ross Lazer</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/jay.jpg" />
+                <div class="member-overlay">Jay Getman</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/arland.jpg" />
+                <div class="member-overlay">Arland Whitfield</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/natalie.jpg" />
+                <div class="member-overlay">Natalie Wiesnet</div>
               </a>
-            </div> -->
+            </div>
           </div>
 
           <!-- Row Two -->
           <div class="row">
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/aravind.jpg" />
+                <div class="member-overlay">Ararvind Gopalakrishnan</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/andy.jpg" />
+                <div class="member-overlay">Andy Pregler</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/sissy.jpg" />
+                <div class="member-overlay">Sissy Whitfield</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/max.jpg" />
+                <div class="member-overlay">Max Matthews</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/hailey.jpg" />
+                <div class="member-overlay">Hailey Temple</div>
               </a>
             </div>
             <div class="col-sm-2">
               <a href="#">
-                <img src="static/img/sample_headshot.jpg" />
-                <div class="member-overlay">Billy Ceskavich</div>
+                <img src="static/img/branden.jpg" />
+                <div class="member-overlay">Branden Birmingham</div>
               </a>
             </div>
           </div> <!-- /row two -->
@@ -266,21 +261,14 @@
 
           <!-- Slides -->
           <div class="carousel-inner" role="listbox">
-            <div class="item active">
+            <div class="news-item item active">
               <div class="carousel-overlay"></div>
-              <img src="static/img/drones.jpg" alt="Placeholder Image">
+              <img class="news-image" src="static/img/drones.jpg" alt="Placeholder Image">
               <div class="carousel-caption">
-                <h1><a href="#">Skyworks Project + SU Athletics</a></h1>
-                <p>The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
+                <h1><a class="news-title" href="#">Skyworks Project + SU Athletics</a></h1>
+                <p class="news-desc">The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
               </div>
             </div>
-            <div class="item">
-              <div class="carousel-overlay"></div>
-              <img src="static/img/drones.jpg" alt="Placeholder Image">
-              <div class="carousel-caption">
-                <h1><a href="#">Skyworks Project + SU Athletics</a></h1>
-                <p>The Skyworks Team -- spearheaded by Arland Whitfield and Natalie Wiesnet -- has teamed up with SU Athletics to film practice sessions throughout campus. Check out their footage online or read more here.</p>
-              </div>
           </div>
 
           <!-- Controls -->
@@ -303,39 +291,11 @@
             <!-- Apply Form -->
             <div class="col-sm-6">
               <p>Interested in getting involved with NEXIS? Want to work on your own independent projects?</p>
-              <button type="button" id="apply-button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#apply-modal">Apply Today</button>
-            </div> <!-- /apply -->
 
-            <!-- Modal -->
-            <div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="apply-modal-label" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="apply-modal-label">Email NEXIS</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form role="form">
-                      <div class="form-group">
-                        <label for="input-email">Your Email</label>
-                        <input type="email" class="form-control" id="input-email" placeholder="netid@syr.edu">
-                      </div>
-                      <div class="form-group">
-                        <label for="input-subject">Subject</label>
-                        <input type="text" class="form-control" id="input-subject" placeholder="Interest in NEXIS">
-                      </div>
-                      <div class="form-group">
-                        <label for="input-content">Message Content</label>
-                        <textarea class="form-control" id="input-content" rows="3"></textarea>
-                      </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send</button>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- /modal -->
+              <form action="mailto:pbcroy@syr.edu">
+                <button type="submit" id="apply-button" class="btn btn-primary btn-lg">Apply Today</button>
+              </form>
+            </div> <!-- /apply -->
 
             <div class="col-sm-6">
               <div class="list-container">
@@ -352,6 +312,8 @@
         </div> <!-- /row container -->
       </section> <!-- /contact -->
 
+      <!-- END INDEX PAGE CONTENT -->
+
       <footer>
         <img src="static/img/nexislogo_outline.png" alt="NEXIS Logo" />
         <p>2014</p>
@@ -362,12 +324,21 @@
     <script src="static/js/bootstrap.min.js"></script>
 
     <script>
-      $('body').scrollspy({ target: '.navbar' })
+      $('body').scrollspy({ target: '.navbar' });
+
+      var updatepics = function() {
+        var height = $('#members img').height();
+        $('.member-overlay').css({'width': height+'px'});
+      };
+
+      $(window).on('resize', updatepics);
 
       // Makes member avatar overlay squared
       $(document).ready(function(){
         var height = $('#members img').height();
         $('.member-overlay').css({'width': height+'px'});
+
+        updatepics();
       });
     </script>
   </body>
