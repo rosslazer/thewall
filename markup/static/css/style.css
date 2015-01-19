@@ -312,10 +312,20 @@ Content Page Sections
 ====================== */
 
 header .img-container {
-  background-image: url('../img/drones.jpg');
-  background-size: cover;
   height: 500px;
+  width: 100%;
   position: relative;
+  overflow: hidden;
+}
+
+header img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  header img {
+    width: 200%;
+  }
 }
 
 header .header-overlay {

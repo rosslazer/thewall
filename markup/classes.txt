@@ -20,3 +20,19 @@ index.html
 .news-image: image for the news story
 .news-title: name of the news story
 .news-desc: quick description of the news story
+
+-------
+
+page.html - template page for events / news stories
+
+header - container for the header image/title/byline
+.header-image: image for the story/event
+.header-title: title of the story/event
+.header-subtitle: byline for the story/event
+
+.page-container - main container of description text
+
+-------
+
+bio.html - bio page template for members
+
