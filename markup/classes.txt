@@ -36,3 +36,9 @@ header - container for the header image/title/byline
 
 bio.html - bio page template for members
 
+.bio-header: container of the avatar and title header
+.bio-img: user avatar
+.bio-name: member name
+.bio-sub: member subtitle
+
+.bio-text - main container of description text

@@ -349,7 +349,8 @@ header .header-text h3 {
   font-style: italic;
 }
 
-#page h2 {
+#page h2,
+#bio h2 {
   border-bottom: 1px solid #e64c3b;
   padding: 20px 5px;
   margin-top: 0px;
@@ -358,4 +359,57 @@ header .header-text h3 {
 
 ul {
   font-size: 18px;
+}
+
+.bio-img-container {
+  width: 400px;
+  float: left;
+}
+
+.bio-img {
+  border-radius: 100%;
+  max-width: 100%;
+}
+
+.bio-title {
+  float: left;
+  margin-left: 40px;
+}
+
+.bio-name {
+  font-size: 50px;
+}
+
+.bio-sub {
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.bio-text {
+  clear: both;
+  padding-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .bio-img-container {
+    width: 200px;
+    float: none;
+    margin: 0px auto;
+  }
+
+  .bio-title {
+    text-align: center;
+    float: none;
+    margin-left: 0px;
+  }
+
+  .bio-name {
+    font-size: 30px;
+  }
+
+  .bio-sub {
+    font-size: 20px;
+  }
 }
