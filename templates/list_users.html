@@ -1,9 +1,28 @@
 {#% extends "layout.html" %#}
 {% block body %}
 
-    <ul id="users">
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Image</th>		
+		<th>Actions</th>
+	</tr>
     {% for user in users %}
-        <li><a href="{{ user.name }}">{{ user.name }}</a><img src="images/{{user.filename}}"></li>
+	<tr>
+    	<td>{{ user.name }}</td>
+    	<td><img src="images/{{user.filename}}"></td> 
+    	<td><a href = "#">Delete</a><br></br><a href = "#">Edit</a></td>
+	</tr>
     {% endfor %}
-    </ul>
+</table>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
 {% endblock %}
